@@ -1,0 +1,139 @@
+.pageWrapper {
+  background: #111;
+  min-height: 100vh;
+  color: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+  background: #202020;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.left a {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.right a:hover {
+  color: #3b82f6;
+}
+
+/* TITLE */
+.topTitle {
+  text-align: center;
+  padding: 20px;
+}
+
+.topTitle h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* MOVIE GRID */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.movieCard {
+  background: #1c1c1c;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.movieTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.movieActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button,
+.downloadLink {
+  flex: 1;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+button {
+  background: #3b82f6;
+  color: #fff;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+.downloadLink {
+  background: #10b981;
+  color: #fff;
+}
+
+.downloadLink:hover {
+  background: #059669;
+}
+
+/* PLAYER */
+.player {
+  margin-top: 30px;
+  background: #1c1c1c;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.player h2 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+video {
+  width: 100%;
+  max-height: 480px;
+  border-radius: 8px;
+  background: #000;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background: #202020;
+}
+
+.footer a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #60a5fa;
+}
