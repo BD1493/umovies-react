@@ -6,13 +6,14 @@ export default function About() {
       {/* HEADER */}
       <div className={styles.header}>
         <div className={styles.left}>
-          <a href="/">Umovies || Home</a>
+          <a href="/">Umovies || About</a>
         </div>
         <div className={styles.right}>
           <a href="/register">Register</a>
           <a href="/login">Login</a>
           <a href="/about">About</a>
           <a href="/tos">ToS & Privacy Policy</a>
+          <a href="/movies">Movies</a>
         </div>
       </div>
 

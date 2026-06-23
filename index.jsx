@@ -45,10 +45,10 @@ export default function Home() {
                 </ol>
                 <p>
                     Ready to get started?
-                    <a href="register" className={styles.link}> Register here.</a>
+                    <a href="/register" className={styles.link}> Register here.</a>
                 </p>
             </section>
-            <footer>&copy; 2026 Umovies. All Rights Reserved || <a href="./pages/tos/index.html">Privacy Policy</a></footer>
+            <footer>&copy; 2026 Umovies. All Rights Reserved || <a href="/tos">Privacy Policy</a></footer>
         </>);
 
 };

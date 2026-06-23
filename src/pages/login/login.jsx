@@ -34,13 +34,14 @@ export default function Login() {
         <>
             <div className={styles.header}>
                 <div className={styles.left}>
-                    <a href="../../../index.html">Umovies</a>
+                    <a href="/">Umovies || Login</a>
                 </div>
                 <div className={styles.right}>
                     <a href="/register">Register</a>
                     <a href="/login">Login</a>
                     <a href="/about">About</a>
                     <a href="/tos">ToS & Privacy Policy</a>
+                    <a href="/movies">Movies</a>
                 </div>
             </div>
 
