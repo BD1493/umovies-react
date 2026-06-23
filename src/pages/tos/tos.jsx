@@ -1,6 +1,10 @@
 import styles from "./tos.module.css";
+import { useEffect } from "react";
 
 export default function Tos() {
+  useEffect(() => {
+    document.title = "Umovies || ToS and Privacy Policy"
+  }, []);
   return (
     <div className={styles.pageWrapper}>
       {/* HEADER */}

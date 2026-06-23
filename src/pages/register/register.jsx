@@ -9,6 +9,9 @@ const users = [
 ];
 export default function Register() {
     useEffect(() => {
+        document.title = "Umovies || Register"
+    }, []);
+    useEffect(() => {
         const vemail = users[0].email
         const vpass = users[0].password
         document.getElementById("login-btn").onclick = function () {
@@ -21,7 +24,7 @@ export default function Register() {
             }
             if (email == vemail && password == vpass) {
                 alert("Registeration succsesfull")
-                window.location.href = "../login/login.jsx"
+                window.location.href = "/login"
             }
             else {
                 alert("invalid email or password")
@@ -49,9 +52,9 @@ export default function Register() {
                 <input type="email" required placeholder="Enter umovies@umovies.com" id="email-inp" />
                 <input type="password" required placeholder="Enter byebye1493" id="password-inp" />
                 <button id="login-btn">Login!</button>
-                <p>Already have an account yet? Click <a href="/tos">here</a>!</p>
+                <p>Already have an account yet? Click <a href="/login">here</a>!</p>
             </div>
-            <footer>&copy; 2026 Umovies. All Rights Reserved || <a href="../tos/index.js">Privacy Policy</a></footer>
+            <footer>&copy; 2026 Umovies. All Rights Reserved || <a href="/tos">Privacy Policy</a></footer>
         </>);
 
 }

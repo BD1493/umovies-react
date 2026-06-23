@@ -1,6 +1,10 @@
 import styles from "./about.module.css";
+import { useEffect } from "react";
 
 export default function About() {
+  useEffect(() => {
+        document.title = "Umovies || About"
+    }, []);
   return (
     <div className={styles.pageWrapper}>
       {/* HEADER */}

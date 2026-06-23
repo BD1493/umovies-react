@@ -1,7 +1,11 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import styles from "./movies.module.css"; // you can rename or keep your CSS
 
 export default function Movies() {
+  useEffect(() => {
+    document.title = "Umovies || Movies"
+  }, []);
   const [currentMovie, setCurrentMovie] = useState({
     title: "Select a movie to stream",
     src: ""
