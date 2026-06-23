@@ -1,16 +1,138 @@
-# React + Vite
+🎬 Umovies — Modern Movie Streaming UI (React + Vite)
+Umovies is a clean, fast, and modern movie‑streaming interface built using React, Vite, and React Router.
+It features a neon‑inspired cinematic UI, a simple movie player, download options, and multiple pages including Login, Register, About, ToS, and a full Movie Library.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is designed to be lightweight, responsive, and easy to extend.
 
-Currently, two official plugins are available:
+🚀 Features
+🎥 Movie Library
+Stream movies directly in the built‑in video player
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Download movies with one click
 
-## React Compiler
+Clean grid layout with responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🧭 Multi‑Page Navigation
+Built using React Router, including pages for:
 
-## Expanding the ESLint configuration
+Home
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Login
+
+Register
+
+About
+
+Terms of Service & Privacy Policy
+
+Movies
+
+🎨 Modern UI
+Neon‑themed cinematic design
+
+CSS Modules for clean, component‑scoped styling
+
+Reusable header + footer across pages
+
+⚡ Powered by Vite
+Fast development server
+
+Instant HMR
+
+Lightweight build output
+
+📁 Project Structure
+Code
+umovies/
+├── index.html
+├── index.jsx
+├── index.module.css
+├── public/
+├── src/
+│   ├── main.jsx
+│   ├── assets/
+│   ├── pages/
+│   │   ├── about/
+│   │   │   ├── about.jsx
+│   │   │   └── about.module.css
+│   │   ├── login/
+│   │   │   ├── login.jsx
+│   │   │   └── login.module.css
+│   │   ├── register/
+│   │   │   ├── register.jsx
+│   │   │   └── register.module.css
+│   │   ├── Movies/
+│   │   │   ├── movies.jsx
+│   │   │   └── movies.module.css
+│   │   └── tos/
+│   │       ├── tos.jsx
+│   │       └── tos.module.css
+│   └── ...
+└── package.json
+🛠️ Tech Stack
+React 18
+
+Vite
+
+React Router DOM
+
+CSS Modules
+
+JavaScript (ES6+)
+
+📦 Installation
+Clone the repository:
+
+bash
+git clone https://github.com/BD1493/umovies-react.git
+cd umovies
+Install dependencies:
+
+bash
+npm install
+Start the development server:
+
+bash
+npm run dev
+The app will be available at:
+
+Code
+http://localhost:5173/
+🧩 Routing Setup
+The router is defined in src/main.jsx:
+
+jsx
+<BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/about" element={<About />} />
+    <Route path="/tos" element={<Tos />} />
+    <Route path="/movies" element={<Movies />} />
+  </Routes>
+</BrowserRouter>
+🎬 Movie Player
+The Movies page includes:
+
+A responsive video player
+
+Dynamic “Now Playing” title
+
+Stream + Download buttons
+
+State‑based movie switching
+
+📄 License
+This project is for educational and personal use.
+You may modify or extend it as needed.
+
+🤝 Contributing
+Pull requests are welcome!
+If you’d like to add features, improve UI, or fix bugs, feel free to fork the repo and submit a PR.
+
+⭐ Author
+BD1493  
+
+🎥 Movies
+Movies will not be played due to copy-right issues and storage problems.
