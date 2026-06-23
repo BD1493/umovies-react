@@ -1,48 +1,26 @@
-🎬 Umovies — Modern Movie Streaming UI (React + Vite)
-Umovies is a clean, fast, and modern movie‑streaming interface built using React, Vite, and React Router.
-It features a neon‑inspired cinematic UI, a simple movie player, download options, and multiple pages including Login, Register, About, ToS, and a full Movie Library.
+# Umovies — Modern Movie Streaming UI (React + Vite)
 
-This project is designed to be lightweight, responsive, and easy to extend.
+Umovies is a modern, fast, and clean movie‑streaming interface built using **React**, **Vite**, and **React Router**.  
+It features a responsive movie library, built‑in video player, download options, and multiple pages including Login, Register, About, ToS, and Movies.
 
-🚀 Features
-🎥 Movie Library
-Stream movies directly in the built‑in video player
+This project is designed to be lightweight, modular, and easy to extend.
 
-Download movies with one click
+---
 
-Clean grid layout with responsive design
+## 📌 Features
 
-🧭 Multi‑Page Navigation
-Built using React Router, including pages for:
+- Movie Library with streaming and download options  
+- Built‑in responsive HTML5 video player  
+- Multi‑page navigation using React Router  
+- Clean UI with CSS Modules  
+- Reusable header and footer  
+- Fast development environment powered by Vite  
 
-Home
+---
 
-Login
+## 📁 Project Structure
 
-Register
-
-About
-
-Terms of Service & Privacy Policy
-
-Movies
-
-🎨 Modern UI
-Neon‑themed cinematic design
-
-CSS Modules for clean, component‑scoped styling
-
-Reusable header + footer across pages
-
-⚡ Powered by Vite
-Fast development server
-
-Instant HMR
-
-Lightweight build output
-
-📁 Project Structure
-Code
+```
 umovies/
 ├── index.html
 ├── index.jsx
@@ -67,41 +45,45 @@ umovies/
 │   │   └── tos/
 │   │       ├── tos.jsx
 │   │       └── tos.module.css
-│   └── ...
 └── package.json
-🛠️ Tech Stack
-React 18
+```
 
-Vite
+---
 
-React Router DOM
+## 🛠 Installation
 
-CSS Modules
-
-JavaScript (ES6+)
-
-📦 Installation
 Clone the repository:
 
-bash
-git clone https://github.com/BD1493/umovies-react.git
+```bash
+git clone https://github.com/your-username/umovies.git
 cd umovies
+```
+
 Install dependencies:
 
-bash
+```bash
 npm install
+```
+
 Start the development server:
 
-bash
+```bash
 npm run dev
+```
+
 The app will be available at:
 
-Code
+```
 http://localhost:5173/
-🧩 Routing Setup
-The router is defined in src/main.jsx:
+```
 
-jsx
+---
+
+## 🔗 Routing Overview
+
+Defined in `src/main.jsx`:
+
+```jsx
 <BrowserRouter>
   <Routes>
     <Route path="/" element={<Home />} />
@@ -112,27 +94,86 @@ jsx
     <Route path="/movies" element={<Movies />} />
   </Routes>
 </BrowserRouter>
-🎬 Movie Player
+```
+
+---
+
+## 🎬 Movie Player
+
 The Movies page includes:
 
-A responsive video player
+- Responsive HTML5 video player  
+- Dynamic “Now Playing” title  
+- Stream and download buttons  
+- State‑based movie switching  
 
-Dynamic “Now Playing” title
+---
 
-Stream + Download buttons
+## 🚀 Deploying to Render
 
-State‑based movie switching
+Render supports Vite apps easily.  
+Follow these steps:
 
-📄 License
-This project is for educational and personal use.
+### 1. Create a `build` script in `package.json`
+
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
+```
+
+### 2. Push your project to GitHub
+
+```bash
+git add .
+git commit -m "Initial commit"
+git push origin main
+```
+
+### 3. Go to Render → New → Static Site
+
+Set these values:
+
+| Setting | Value |
+|--------|--------|
+| **Build Command** | `npm run build` |
+| **Publish Directory** | `dist` |
+| **Node Version** | 18+ |
+| **Root Directory** | (leave empty) |
+
+### 4. Add this file for routing support  
+Create:
+
+```
+public/_redirects
+```
+
+Inside it:
+
+```
+/*    /index.html   200
+```
+
+This ensures React Router works on Render.
+
+### 5. Deploy  
+Render will build and host your site automatically.
+
+---
+
+## 📄 License
+
+This project is for educational and personal use.  
 You may modify or extend it as needed.
 
-🤝 Contributing
-Pull requests are welcome!
-If you’d like to add features, improve UI, or fix bugs, feel free to fork the repo and submit a PR.
+---
 
-⭐ Author
-BD1493  
+## 👤 Author
 
-🎥 Movies
-Movies will not be played due to copy-right issues and storage problems.
+Created by **BD1493**  
+🎥 Movies will not work due to storage and copy-right issues.
+
