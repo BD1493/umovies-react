@@ -16,6 +16,7 @@ export default function Home() {
                     <a href="/login">Login</a>
                     <a href="/about">About</a>
                     <a href="/tos">ToS & Privacy Policy</a>
+                    <a href="/movies">Movies</a>
                 </div>
             </div>
             <section className={styles.section}>
