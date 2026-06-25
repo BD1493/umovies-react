@@ -1,38 +1,30 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styles from "./login.module.css";
-const users = [
-    {
-        username: "umovies.com",
-        email: "umovies@umovies.com",
-        password: "byebye1493"
-    },
-];
 export default function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
     useEffect(() => {
-        document.title = "Umovies || Login"
+        document.title = "Umovies || Login";
     }, []);
-    useEffect(() => {
-        const vemail = users[0].email
-        const vpass = users[0].password
-        document.getElementById("login-btn").onclick = function () {
-            let email = document.getElementById("email-inp").value.trim();
-            let password = document.getElementById("password-inp").value.trim()
-
-            if (!email || !password) {
-                alert("Please enter both username and password")
-                return;
-            }
-            if (email == vemail && password == vpass) {
-                alert("Login succsesfull")
-                window.location.href = "/movies"
-            }
-            else {
-                alert("invalid email or password")
-                alert("The email is umovies@umoives.com")
-                alert("The password is byebye1493")
-            }
-        };
-    }, []);
+    function handleLogin(e) {
+        e.preventDefault();
+        setError("");
+        if (!email.trim() || !password.trim()) {
+            setError("Please enter both email and password.");
+            return;
+        }
+        const users = JSON.parse(localStorage.getItem("umovies_users") || "[]");
+        const match = users.find(
+            u => u.email === email.trim().toLowerCase() && u.password === password
+        );
+        if (match) {
+            localStorage.setItem("umovies_session", JSON.stringify({ username: match.username, email: match.email }));
+            window.location.href = "/movies";
+        } else {
+            setError("Invalid email or password.");
+        }
+    }
     return (
         <>
             <div className={styles.header}>
@@ -43,18 +35,31 @@ export default function Login() {
                     <a href="/register">Register</a>
                     <a href="/login">Login</a>
                     <a href="/about">About</a>
-                    <a href="/tos">ToS & Privacy Policy</a>
+                    <a href="/tos">ToS &amp; Privacy Policy</a>
                     <a href="/movies">Movies</a>
                 </div>
             </div>
-
-            <div className={styles.login}>
-                <input type="email" required placeholder="Enter umovies@umovies.com" id="email-inp" />
-                <input type="password" required placeholder="Enter byebye1493" id="password-inp" />
-                <button id="login-btn">Login!</button>
-                <p>Don't have an account yet? Click <a href="/register">here</a>!</p>
-            </div>
+            <form className={styles.login} onSubmit={handleLogin} noValidate>
+                <h2 className={styles.title}>Sign In</h2>
+                {error && <p className={styles.error}>{error}</p>}
+                <input
+                    type="email"
+                    placeholder="Email address"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    autoComplete="email"
+                />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={e => setPassword(e.target.value)}
+                    autoComplete="current-password"
+                />
+                <button type="submit">Login!</button>
+                <p>Don&apos;t have an account yet? Click <a href="/register">here</a>!</p>
+            </form>
             <footer>&copy; 2026 Umovies. All Rights Reserved || <a href="/tos">Privacy Policy</a></footer>
-        </>);
-
+        </>
+    );
 }
